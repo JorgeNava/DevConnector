@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://db_admin:cisco@cluster0.ddie5.mongodb.net/<dbname>?retryWrites=true&w=majority"
+	"mongoURI": "mongodb+srv://db_admin:cisco@cluster0.ddie5.mongodb.net/<dbname>?retryWrites=true&w=majority",
+	"jwtSecret": "mySecretToken"
 }
