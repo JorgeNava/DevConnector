@@ -1,4 +1,6 @@
 {
 	"mongoURI": "mongodb+srv://db_admin:cisco@cluster0.ddie5.mongodb.net/<dbname>?retryWrites=true&w=majority",
-	"jwtSecret": "mySecretToken"
+	"jwtSecret": "mySecretToken",
+	"githubClientId": "7ef24f55d7cef8b989e4",
+	"githubSecret": "1a1b315fb023986df2eca3d01fdf541e8a2d73b2"
 }
