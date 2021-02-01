@@ -1,0 +1,27 @@
+version: "3.8"
+services: 
+	client:
+  	image: "primaltech/tutorel:latest"
+  	container_name: "react-container"
+		ports: 
+				- "3000:3000"
+		stdin_open: true
+			build: 
+				context: .
+				dockerfile: Dockerfile.dev
+			
+			volumes:
+				- "/app/node_modules"
+				- "./:./app"
+			mongo:
+				image: "mongo"
+				container_name: "mongo-container"
+				environment:
+					- MONGO_INITDB_DATABASE=general_cisco
+					- MONGO_INITDB_ROOT_USERNAME=general_cisco
+					- MONGO_INITDB_ROOT_PASSWORD=general_cisco
+				volumes:
+					- ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+					- ./mongo-volume:/data/db
+				ports:
+					- "27017:27017"
